@@ -83,6 +83,19 @@ section {
 
 .home-img img {                 /* home image size adjsuting */
     width: 35vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% {
+        transform:  translateY(0);
+    }
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .home-content h3 {
@@ -371,7 +384,8 @@ span {
     color: var(--second-bg-colour);
 }
 
-/* BREAKPOINTS */
+/* BREAKPOINTS for screen size */
+
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
@@ -386,7 +400,19 @@ span {
     section {
         padding: 10rem 3% 2rem;
     }
+
+    .services {
+        padding-bottom: 7rem;
+    }
     
+    .portfolio {
+        padding-bottom: 7rem;
+    }
+
+    .contact {
+        min-height: auto;
+    }
+
     .footer {
         padding: 2rem 3%;
     }
@@ -417,5 +443,80 @@ span {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 90vw;                /*Size check */
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .about img {
+        width: 90vw;                /*Size check */
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .services h2 {
+        margin-bottom: 3rem;
+    }
+
+    .portfolio h2 {
+        margin-bottom: 3rem;
+    }
+
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 617px) {
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .contact form .input-box input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 365px) {
+    .home-img img {
+        width: 70vw;        /*Size check */
+    }
+
+    .about-img img {
+        width: 70vw;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer p {
+        text-align: center;
+        margin-top: 2rem;
     }
 }
