@@ -17,11 +17,10 @@ window.onscroll = () => {
         };
     });
 
-/*Sticky Navbar*/
+    /*Sticky Navbar*/
     let header = document.querySelector('header');
 
     header.classList.toggle('sticky', window.scrollY > 100);
-
 };
 
 
