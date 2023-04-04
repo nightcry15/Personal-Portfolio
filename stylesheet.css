@@ -54,7 +54,7 @@ section {
     font-size: 4.5rem;
     color: var(--text-colour);
     font-weight: 600;
-    cursor: default;
+    cursor: pointer;
 }
 
 .navbar a {
@@ -420,7 +420,7 @@ span {
 
 @media (max-width: 768px) {
     #menu-icon {
-        padding-right: 6rem;
+        /* padding-right: 6rem; */
         display: block;
     }
 
