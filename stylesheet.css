@@ -521,3 +521,8 @@ span {
         margin-top: 2rem;
     }
 }
+
+section#mySection .navbar {
+    background-color: blue;
+    color: white;
+}
